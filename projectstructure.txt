@@ -1,0 +1,43 @@
+Project structure for: stock_trading_bot
+========================================
+stock_trading_bot/
+│   .gitignore               # Specify files and directories to ignore in version control
+│   create_project_tree.py
+│   developmentplan.txt
+│   docker-compose.yml
+│   Dockerfile
+│   main.py
+│   projectstructure.txt
+│   README.md
+│   requirements.txt           # List all necessary dependencies here
+├── config/
+│   └── config.py              # Store API keys, model hyperparameters, etc.
+├── data/
+│   ├── processed/             # Store preprocessed data here
+│   └── raw/                   # Store raw stock data from yfinance here
+├── logs/
+│   └── trading_logs.log       # Log file for errors, warnings, and important events
+├── models/
+│   ├── indicators.py          # Implement Moving Averages and RSI here
+│   ├── lstm_model.py          # LSTM model architecture and training logic
+│   ├── model_utils.py         # Utility functions for models
+│   └── saved_models/          # Directory to save trained LSTM models
+├── notebooks/
+│   └── data_analysis.ipynb    # EDA, model tuning, and strategy visualization
+├── scripts/
+│   ├── data_collection.py     # Script for collecting stock data using yfinance
+│   ├── data_preprocessing.py  # Data preparation for indicators and LSTM
+│   └── train_model.py         # Script for training the LSTM model
+├── tests/
+│   ├── test_data.py           # Unit tests for data collection and preprocessing
+│   └── test_model.py          # Unit tests for models and prediction logic
+├── trading_bot/
+│   ├── live_trading.py        # Live trading logic with API integration
+│   ├── paper_trading.py       # New file for paper trading functionality
+│   └── signal_generator.py    # Signal generation from indicators and LSTM
+└── utils/
+    ├── database.py            # New file for database operations
+    ├── error_handling.py     # Centralized error handling and logging utilities
+    ├── performance_metrics.py  # Functions for calculating performance metrics
+    ├── risk_management.py     # Implement risk management functions here
+    └── visualization.py       # Functions for visualizing data and results

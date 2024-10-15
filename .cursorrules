@@ -1,0 +1,70 @@
+# Cursor Rules for Stock Trading Bot Project
+
+1. Code Style:
+   - Follow PEP 8 guidelines for Python code style.
+   - Use meaningful variable and function names.
+   - Add docstrings to all functions and classes.
+
+2. Error Handling:
+   - Use the centralized error handling system in utils/error_handling.py.
+   - Wrap all external API calls and database operations with appropriate error handling.
+
+3. Logging:
+   - Use the logging system set up in utils/error_handling.py for all logging needs.
+   - Log important events, warnings, and errors throughout the application.
+
+4. Database Operations:
+   - Use SQLAlchemy ORM for all database operations.
+   - Define database models in a separate models.py file.
+   - Use database migrations for schema changes.
+
+5. API Integration:
+   - Store all API keys and sensitive information in environment variables.
+   - Use the config.py file to manage configuration settings.
+
+6. Testing:
+   - Write unit tests for all major components.
+   - Aim for at least 80% test coverage.
+   - Use pytest for running tests.
+
+7. Documentation:
+   - Keep the README.md file up-to-date with project overview, setup instructions, and usage guidelines.
+   - Document all major functions and classes with clear docstrings.
+
+8. Version Control:
+   - Use meaningful commit messages.
+   - Create feature branches for new features or major changes.
+   - Regularly merge changes from the main branch into feature branches.
+
+9. Performance:
+   - Optimize database queries for efficiency, especially when dealing with large datasets.
+   - Use appropriate indexing in the database.
+   - Consider using caching mechanisms for frequently accessed data.
+
+10. Security:
+    - Never commit sensitive information (API keys, passwords) to version control.
+    - Use parameterized queries to prevent SQL injection.
+    - Implement proper authentication and authorization for any web interfaces.
+
+11. Code Review:
+    - Conduct regular code reviews to maintain code quality and consistency.
+    - Use linting tools (flake8, pylint) to catch common issues.
+
+12. Containerization:
+    - Keep the Dockerfile and docker-compose.yml files up-to-date with any new dependencies or services.
+    - Use multi-stage builds in Dockerfile for smaller production images.
+
+13. Machine Learning:
+    - Regularly retrain and validate the LSTM model to ensure its predictions remain accurate.
+    - Monitor for model drift and implement alerts if performance degrades.
+
+14. Trading Logic:
+    - Implement safeguards and circuit breakers in the trading logic to prevent unexpected behavior.
+    - Thoroughly test all trading strategies in paper trading mode before live deployment.
+
+15. Scalability:
+    - Design the system to handle multiple stocks or assets efficiently.
+    - Consider using asynchronous programming for I/O-bound operations.
+
+Remember to review and update these rules as the project evolves.
+
